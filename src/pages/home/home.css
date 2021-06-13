@@ -1,8 +1,16 @@
-.home{
+/* .home{
     flex: 4;
+}*/
+
+.homeWidgets {
+  display: flex;
+  /* margin: 20px; */
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
-.homeWidgets{
-    display: flex;
-    margin: 20px;
+.home {
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(10px);
+  color: rgb(255, 255, 255);
 }
