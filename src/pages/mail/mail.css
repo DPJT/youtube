@@ -1,0 +1,15 @@
+.grid-container-mail {
+  background-color: aqua;
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+.grid-item-mail:first-child {
+  background-color: rgb(145, 39, 39);
+  grid-row: 1 / span 1;
+}
+.grid-item-mail:nth-child(2) {
+  background-color: rgb(26, 30, 37);
+  grid-row: 1 / span 1;
+}

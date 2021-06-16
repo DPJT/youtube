@@ -14,62 +14,103 @@ import {
   Report,
 } from "@material-ui/icons";
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
 
 export default function Sidebar() {
+  const [active, setActive] = useState("active");
+  let act = "active";
+  function handleclick() {
+    setActive("");
+  }
+
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Dashboard</h3>
           <ul className="sidebarList">
-            <Link to="/" className="link">
-            <li className="sidebarListItem active">
+            <NavLink
+              to="/main"
+              className="link sidebarListItem"
+              activeClassName="actived"
+            >
               <LineStyle className="sidebarIcon" />
               Home
-            </li>
-            </Link>
-            <li className="sidebarListItem">
+            </NavLink>
+            <NavLink
+              to="/analytics"
+              className="link sidebarListItem"
+              activeClassName="actived"
+            >
               <Timeline className="sidebarIcon" />
               Analytics
-            </li>
-            <li className="sidebarListItem">
+            </NavLink>
+            <NavLink
+              to="/sales"
+              className="link sidebarListItem"
+              activeClassName="actived"
+            >
               <TrendingUp className="sidebarIcon" />
               Sales
-            </li>
+            </NavLink>
+            {/* segunda parte */}
           </ul>
         </div>
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Quick Menu</h3>
           <ul className="sidebarList">
-            <Link to="/users" className="link">
-              <li className="sidebarListItem">
-                <PermIdentity className="sidebarIcon" />
-                Users
-              </li>
-            </Link>
-            <Link to="/products" className="link">
-              <li className="sidebarListItem">
-                <Storefront className="sidebarIcon" />
-                Products
-              </li>
-            </Link>
-            <li className="sidebarListItem">
+            <NavLink
+              to="/users"
+              className="link sidebarListItem"
+              activeClassName="actived"
+            >
+              <div className="bolita blue"></div>
+              <PermIdentity className="sidebarIcon" />
+              Users
+            </NavLink>
+
+            <NavLink
+              to="/products"
+              className="link sidebarListItem"
+              activeClassName="actived"
+            >
+              <div className="bolita red"></div>
+              <Storefront className="sidebarIcon" />
+              Products
+            </NavLink>
+
+            <NavLink
+              to="/transactions"
+              className="link sidebarListItem"
+              activeClassName="actived"
+            >
               <AttachMoney className="sidebarIcon" />
               Transactions
-            </li>
-            <li className="sidebarListItem">
+            </NavLink>
+
+            <NavLink
+              to="/reports"
+              className="link sidebarListItem"
+              activeClassName="actived"
+            >
               <BarChart className="sidebarIcon" />
               Reports
-            </li>
+            </NavLink>
           </ul>
         </div>
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Notifications</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem">
+            <NavLink
+              to="/mail"
+              className="link sidebarListItem"
+              activeClassName="actived"
+            >
               <MailOutline className="sidebarIcon" />
               Mail
-            </li>
+            </NavLink>
+
             <li className="sidebarListItem">
               <DynamicFeed className="sidebarIcon" />
               Feedback

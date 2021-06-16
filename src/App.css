@@ -1,10 +1,93 @@
-.container{
-    display: flex;
-    margin-top: 10px;
+/* * {
+  padding: 0px;
+  margin: 0px;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+} */
+/* original css */
+/* .container {
+  display: flex;
+  margin-top: 10px;
+  width: 100vw;
 }
 
+.link {
+  text-decoration: none;
+  color: inherit;
+} */
+/* DJ APP MOD CSS */
 
-.link{
-    text-decoration: none;
-    color: inherit;
+/* .grid-item:first-child {
+  background-color: rgb(16, 16, 17);
+  background-color: rgb(2, 9, 104);
+  grid-column: 1 / span 7;
+  padding: 15px;
+}  */
+
+/* .grid-item:nth-child(2) {
+  background-color: rgb(26, 30, 37);
+  grid-column: 1 / span 7;
+} */
+
+/* .grid-item:nth-child(2) {
+  background-color: rgb(19, 19, 19);
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 2;
+  height: 100vh;
+}
+
+.grid-item:nth-child(3) {
+  background-color: rgb(24, 24, 26);
+  grid-row: 3 / span 1;
+  grid-column: 3 / span 5;
+}
+
+.grid-item:first-child {
+  background-color: rgb(16, 16, 17);
+  background-color: rgb(2, 9, 97);
+  grid-column: 3 / 8;
+  grid-row: 1 / 2;
+  padding: 15px;
+} */
+
+/* .grid-item:nth-child(2) {
+  background-color: rgb(26, 30, 37);
+  grid-column: 1 / span 7;
+} */
+
+/* TODO EL GRID */
+.grid-container {
+  background-color: aqua;
+  display: grid;
+  height: 100%;
+  grid-template-columns: 0.27fr 1fr;
+  grid-template-rows: 70px 1fr; /* 70px 80px 1fr; */
+  /* grid-template-rows: 5vh 5vh 90vh; */
+  /* border: solid; */
+}
+.grid-item:first-child {
+  background-color: rgb(11, 11, 116);
+  background-color: rgb(240, 240, 240);
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+  padding: 15px;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+.grid-item:nth-child(2) {
+  background-color: rgb(19, 19, 19);
+  background-color: rgb(255, 255, 255);
+  background-color: #f0f0f0;
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 2;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+
+.grid-item:nth-child(3) {
+  background-color: rgb(240, 240, 240);
+  grid-row: 2 / span 1;
+  grid-column: 2 / span 1;
+  min-height: 100vh;
+  height: 100%;
 }

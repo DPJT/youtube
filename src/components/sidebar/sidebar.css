@@ -1,14 +1,16 @@
 .sidebar {
-  flex: 1;
-  height: calc(100vh - 50px);
-  background-color: rgb(251, 251, 255);
+  /* height: calc(100vh); */
+  /* background-color: rgb(16, 16, 17);
+  background-color: rgb(6, 17, 179);
+  background-color: rgb(255, 255, 255); */
+
   position: sticky;
-  top: 50px;
+  top: 0px;
 }
 
 .sidebarWrapper {
   padding: 20px;
-  color: #555;
+  color: rgb(0, 0, 0);
 }
 
 .sidebarMenu {
@@ -26,19 +28,70 @@
 }
 
 .sidebarListItem {
-  padding: 5px;
+  padding: 10px;
   cursor: pointer;
   display: flex;
   align-items: center;
+  margin: 10px;
   border-radius: 10px;
 }
 
-.sidebarListItem.active,
+/* .sidebarListItem.active, */
 .sidebarListItem:hover {
-  background-color: rgb(240, 240, 255);
+  background-color: rgb(224, 224, 224);
+  color: rgb(0, 0, 0);
+
+  background-color: rgb(2, 9, 97);
+  background-color: #f0f0f0;
+  background-color: #ffffff;
+
+  /* background-color: #4a00d4; */
+  color: rgb(0, 0, 0);
 }
 
-.sidebarIcon{
-    margin-right: 5px;
-    font-size: 20px !important;
+.sidebarIcon {
+  margin-right: 5px;
+  font-size: 20px !important;
+}
+/* DJMOD */
+
+.link {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+.link:visited {
+  text-decoration: none;
+  color: none;
+}
+
+.actived {
+  background-color: rgb(224, 224, 224);
+  background-color: #4a00d4;
+  background-color: rgb(190, 9, 48);
+  background-color: rgb(240, 240, 240);
+  background-color: #ffffff;
+
+  color: rgb(0, 0, 0);
+}
+
+.bolita {
+  width: 15px;
+  height: 15px;
+  border-radius: 25px;
+  background-color: rgb(50, 205, 184);
+  margin-right: 10px;
+  display: inline-block;
+}
+.bolita.yellow {
+  background-color: rgb(255, 196, 0);
+}
+
+.bolita.red {
+  background-color: rgb(255, 0, 64);
+}
+.bolita.blue {
+  background-color: rgb(66, 129, 202);
+}
+.bolita.green {
+  background-color: rgb(60, 214, 29);
 }

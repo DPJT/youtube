@@ -17,7 +17,7 @@ export default function ProductList() {
     {
       field: "product",
       headerName: "Product",
-      width: 200,
+      width: 170,
       renderCell: (params) => {
         return (
           <div className="productListItem">
@@ -27,21 +27,21 @@ export default function ProductList() {
         );
       },
     },
-    { field: "stock", headerName: "Stock", width: 200 },
+    { field: "stock", headerName: "Stock", width: 110 },
     {
       field: "status",
       headerName: "Status",
-      width: 120,
+      width: 115,
     },
     {
       field: "price",
       headerName: "Price",
-      width: 160,
+      width: 110,
     },
     {
       field: "action",
       headerName: "Action",
-      width: 150,
+      width: 130,
       renderCell: (params) => {
         return (
           <>
@@ -60,13 +60,15 @@ export default function ProductList() {
 
   return (
     <div className="productList">
-      <DataGrid
-        rows={data}
-        disableSelectionOnClick
-        columns={columns}
-        pageSize={8}
-        checkboxSelection
-      />
+      <div className="container-usuario">
+        <DataGrid
+          rows={data}
+          disableSelectionOnClick
+          columns={columns}
+          pageSize={15}
+          checkboxSelection
+        />
+      </div>
     </div>
   );
 }

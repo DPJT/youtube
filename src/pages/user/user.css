@@ -1,5 +1,10 @@
+* {
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
 .user {
-  flex: 4;
   padding: 20px;
 }
 
@@ -7,37 +12,48 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: white;
 }
 
 .userAddButton {
   width: 80px;
   border: none;
   padding: 5px;
-  background-color: teal;
+  background-color: rgb(255, 255, 255);
   border-radius: 5px;
   cursor: pointer;
-  color: white;
+  color: rgb(20, 20, 20);
   font-size: 16px;
 }
 
 .userContainer {
   display: flex;
   margin-top: 20px;
+  background-color: rgba(111, 111, 187, 0);
+  flex-wrap: wrap;
 }
 
 .userShow {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
   flex: 1;
+  background-color: rgb(180, 181, 189);
+  /* background-color: rgb(0, 17, 255); */
+  margin-right: 0px;
   padding: 20px;
   -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
 }
 
 .userUpdate {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: brown;
   flex: 2;
   padding: 20px;
   -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
-  margin-left: 20px;
+  margin-left: 0px;
 }
 
 .userShowTop {
@@ -66,89 +82,100 @@
   font-weight: 300;
 }
 
-.userShowBottom{
-    margin-top: 20px;
+.userShowBottom {
+  margin-top: 20px;
 }
 
 .userShowTitle {
   font-size: 14px;
   font-weight: 600;
-  color: rgb(175, 170, 170);
+  color: rgb(14, 14, 14);
 }
 
-.userShowInfo{
-    display: flex;
-    align-items: center;
-    margin: 20px 0px;
-    color: #444;
+.userShowInfo {
+  display: flex;
+  align-items: center;
+  margin: 20px 0px;
+  color: #444;
 }
 
-.userShowIcon{
-    font-size: 16px !important;
+.userShowIcon {
+  font-size: 16px !important;
 }
 
-.userShowInfoTitle{
-    margin-left: 10px;
+.userShowInfoTitle {
+  margin-left: 10px;
 }
 
-.userUpdateTitle{
-    font-size: 24px;
-    font-weight: 600;
+.userUpdateTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
 }
 
-.userUpdateForm{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+.userUpdateForm {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  color: white;
 }
 
-.userUpdateItem{
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
+.userUpdateItem {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
 }
 
-.userUpdateItem>label{
-    margin-bottom: 5px;
-    font-size: 14px;
+.userUpdateItem > label {
+  margin-bottom: 5px;
+  font-size: 14px;
 }
 
-.userUpdateInput{
-    border: none;
-    width: 250px;
-    height: 30px;
-    border-bottom: 1px solid gray;
+.userUpdateInput {
+  border: none;
+  width: 250px;
+  height: 30px;
+  /* border-bottom: 1px solid gray; */
+  border-radius: 25px;
+  padding-left: 6%;
+  background-color: rgba(11, 11, 14, 0.301);
+  color: white;
 }
 
-.userUpdateRight{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.userUpdateInput::placeholder {
+  margin-left: 25px;
+  color: rgba(255, 255, 255, 0.473);
 }
 
-.userUpdateUpload{
-    display: flex;
-    align-items: center;
+.userUpdateRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.userUpdateImg{
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
-    object-fit: cover;
-    margin-right: 20px;
+.userUpdateUpload {
+  display: flex;
+  align-items: center;
 }
 
-.userUpdateIcon{
-    cursor: pointer;
+.userUpdateImg {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 20px;
 }
 
-.userUpdateButton{
-    border-radius: 5px;
-    border: none;
-    padding: 5px;
-    cursor: pointer;
-    background-color: darkblue;
-    color: white;
-    font-weight: 600;
+.userUpdateIcon {
+  cursor: pointer;
+}
+
+.userUpdateButton {
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  background-color: rgb(139, 0, 46);
+  color: white;
+  font-weight: 600;
 }
