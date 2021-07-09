@@ -11,7 +11,7 @@
 }
 
 .home {
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(10px); */
   color: rgb(255, 255, 255);
 }

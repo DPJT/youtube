@@ -5,6 +5,8 @@ import { productRows } from "../../dummyData";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
+import Menu from "../../components/menu/menu";
+
 export default function ProductList() {
   const [data, setData] = useState(productRows);
 
@@ -59,16 +61,18 @@ export default function ProductList() {
   ];
 
   return (
-    <div className="productList">
-      <div className="container-usuario">
-        <DataGrid
-          rows={data}
-          disableSelectionOnClick
-          columns={columns}
-          pageSize={15}
-          checkboxSelection
-        />
+    <>
+      <div className="productList">
+        <div className="container-usuario">
+          <DataGrid
+            rows={data}
+            disableSelectionOnClick
+            columns={columns}
+            pageSize={15}
+            checkboxSelection
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 }

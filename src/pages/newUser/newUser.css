@@ -2,7 +2,17 @@
   flex: 4;
 }
 
+.newUserTitle {
+  text-align: center;
+  font-size: 25px;
+  color: #272727;
+  margin-bottom: 10px;
+}
+
 .newUserForm {
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  padding: 15px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -15,43 +25,66 @@
   margin-right: 20px;
 }
 
+/* los titulos de los inputs */
 .newUserItem > label {
   margin-bottom: 10px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
-  color: rgb(151, 150, 150);
+  color: #272727;
 }
 
 .newUserItem > input {
-  height: 20px;
+  background-color: rgba(0, 255, 255, 0);
+  border-bottom: 1px solid rgb(146, 146, 146);
+  height: 30px;
   padding: 10px;
-  border: 1px solid gray;
-  border-radius: 5px;
+  color: rgb(0, 0, 0);
+}
+
+.newUserItem > input::placeholder {
+  color: rgb(153, 153, 153);
+}
+
+.newUserItem > input:focus {
+  color: rgb(0, 0, 0);
+  background-color: #eeeef7;
+  border-radius: 10px;
+  border: none;
 }
 
 .newUserGender > input {
   margin-top: 15px;
 }
 
-.newUserGender>label{
-    margin: 10px;
-    font-size: 18px;
-    color: #555;
+.newUserGender > label {
+  margin: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #272727;
 }
 
-.newUserSelect{
-    height: 40px;
-    border-radius: 5px;
+.newUserSelect {
+  height: 40px;
+  border-radius: 5px;
 }
 
-.newUserButton{
-    width: 200px;
-    border: none;
-    background-color: darkblue;
-    color: white;
-    padding: 7px 10px;
-    font-weight: 600;
-    border-radius: 10px;
-    margin-top: 30px;
-    cursor: pointer;
+.newUserButton {
+  width: max-content;
+  border: none;
+  font-size: 16px;
+  text-align: left;
+  /* border-bottom: 5px solid rgb(5, 139, 0); */
+  border-radius: 10px;
+  background-color: #eeeef7;
+  color: rgb(0, 0, 0);
+  padding: 12px 10px;
+  font-weight: 600;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.newUserButton:hover {
+  background-color: rgb(9, 50, 88);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
 }
