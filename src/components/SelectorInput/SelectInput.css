@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+.selectInput-box--box {
+  width: 150px;
+  position: relative;
+  left: 0px;
+  margin-right: 20px;
+}
+
+/* contenedor del selecciona, aqui se ubica las letras de adentro */
+
+.selectInput-box--container {
+  height: 30px;
+  width: 100%;
+  margin-bottom: 8px;
+  padding-top: 5px;
+  padding-right: 35px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color: rgba(11, 11, 14, 0.301);
+  font-family: sans-serif;
+  border-radius: 25px;
+  font-weight: 600;
+}
+
+.selectInput-box--selected-item {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  padding: 0px 10px 0px 0px;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.selectInput-box--items {
+  margin-top: 5px;
+  overflow: hidden;
+  width: 150px;
+  border-radius: 5px;
+  background-color: var(--primary);
+}
+
+/* estos son los items  */
+.selectInput-box--items div {
+  border: none;
+
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  padding: 6px;
+  margin-bottom: 5px;
+  border-radius: 2px;
+  height: 30px;
+  padding-top: 7px;
+  padding-left: 13px;
+  text-align: left;
+  font-size: 14px;
+}
+.selectInput-box--items div:hover {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.986);
+  cursor: pointer;
+  color: rgb(75, 24, 168);
+  color: var(--primary);
+}
+
+/* container del arrow */
+.selectInput-box--arrow {
+  width: 40px;
+  height: 30px;
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  /* background-color: rgba(62, 146, 69, 0.986); */
+  position: absolute;
+  right: -1px;
+  top: 0;
+  cursor: pointer;
+}
+
+/* .select-box--arrow-down {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid rgb(38, 39, 38);
+}
+
+.select-box--arrow-up {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid rgb(255, 255, 255);
+} */
+
+.arrowInput {
+  position: absolute;
+  top: 7px;
+  left: 16px;
+  height: 15px;
+  width: 15px;
+}
+.arrowInput::before,
+.arrowInput::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 0.15rem;
+  height: 100%;
+  transition: all 0.5s;
+}
+.arrowInput::before {
+  left: -5px;
+  transform: rotate(45deg);
+  background-color: #ffffff;
+}
+.arrowInput::after {
+  left: 5px;
+  transform: rotate(-45deg);
+  background-color: #ffffff;
+}
+.open .arrowInput::before {
+  left: -5px;
+  transform: rotate(-45deg);
+}
+.open .arrowInput::after {
+  left: 5px;
+  transform: rotate(45deg);
+}

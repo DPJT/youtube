@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./menu.css";
-import { NotificationsNone, Language, Settings } from "@material-ui/icons";
 
 export default function Menu(props) {
   //   const menuItems = props.menuItems;
@@ -33,14 +32,14 @@ export default function Menu(props) {
                 <NavLink
                   to={item.link}
                   className="nav__li"
-                  activeClassName="actived"
+                  activeClassName="activedMenuItem"
                   key={item.name}
                 >
                   {item.name}
                 </NavLink>
               );
             })}
-            <button onClick={handleClickDj}>tgt</button>
+            {/* <button onClick={handleClickDj}>tgt</button> */}
           </ul>
         </nav>
       </div>

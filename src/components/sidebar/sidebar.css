@@ -10,7 +10,7 @@
 
 .sidebarWrapper {
   padding: 20px;
-  color: rgb(0, 0, 0);
+  color: var(--cuerpo);
 }
 
 .sidebarMenu {
@@ -18,8 +18,9 @@
 }
 
 .sidebarTitle {
-  font-size: 13px;
-  color: rgb(187, 186, 186);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primaryMasClaro);
 }
 
 .sidebarList {
@@ -34,19 +35,15 @@
   align-items: center;
   margin: 10px;
   border-radius: 10px;
+  color: var(--primaryMasClaro1);
 }
 
 /* .sidebarListItem.active, */
 .sidebarListItem:hover {
-  background-color: rgb(224, 224, 224);
-  color: rgb(0, 0, 0);
-
-  background-color: rgb(2, 9, 97);
-  background-color: #f0f0f0;
-  background-color: #ffffff;
-
-  /* background-color: #4a00d4; */
-  color: rgb(0, 0, 0);
+  background-color: var(--primaryClaro);
+  color: var(--tituloH1);
+  border-radius: 0px;
+  border-left: 2px solid var(--colorComplementarioA);
 }
 
 .sidebarIcon {
@@ -57,7 +54,8 @@
 
 .link {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: var(--cuerpo);
+  color: var(--primaryMasClaro1);
 }
 .link:visited {
   text-decoration: none;
@@ -65,13 +63,22 @@
 }
 
 .actived {
-  background-color: rgb(224, 224, 224);
-  background-color: #4a00d4;
-  background-color: rgb(190, 9, 48);
-  background-color: rgb(240, 240, 240);
-  background-color: #ffffff;
+  background-color: var(--primaryClaro);
+  color: var(--tituloH1);
+  border-radius: 0px;
+  border-left: 2px solid var(--colorComplementarioA);
+}
 
-  color: rgb(0, 0, 0);
+.actived .bolita.blue,
+.actived .bolita.red {
+  background-color: var(--primaryClaro);
+  color: var(--tituloH1);
+  border-radius: 0px;
+
+  background-color: rgb(66, 129, 202);
+  border-radius: 25px;
+  border: none;
+  display: inherit;
 }
 
 .bolita {
@@ -81,6 +88,7 @@
   background-color: rgb(50, 205, 184);
   margin-right: 10px;
   display: inline-block;
+  display: block;
 }
 .bolita.yellow {
   background-color: rgb(255, 196, 0);
@@ -88,9 +96,13 @@
 
 .bolita.red {
   background-color: rgb(255, 0, 64);
+  display: none;
 }
 .bolita.blue {
   background-color: rgb(66, 129, 202);
+  border-radius: 25px;
+  border: none;
+  display: none;
 }
 .bolita.green {
   background-color: rgb(60, 214, 29);

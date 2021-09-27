@@ -23,9 +23,10 @@
   /* margin: auto; */
 }
 .nav__li {
-  background-color: #ffffff;
-  color: #030c26;
-  border-radius: 50px;
+  height: var(--inputAlto1);
+  background-color: var(--primaryClaro);
+  color: var(--tituloH1);
+  border-radius: 6px;
   display: inline-block;
   font-size: 14px;
   font-weight: 600;
@@ -33,6 +34,7 @@
   margin: 10px 15px 20px 0px;
   line-height: 15px;
   text-decoration: none;
+  border: none;
 }
 
 /* .nav__li a {
@@ -47,7 +49,7 @@
 } */
 .nav__li:hover {
   color: #ffffff;
-  background-color: rgb(0, 0, 0);
+  background-color: var(--primaryMasClaro1);
   cursor: pointer;
   text-decoration: none;
 }
@@ -61,3 +63,7 @@
 
   text-align: center;
 } */
+
+.activedMenuItem{
+  background-color: var(--colorComplementarioA);
+}

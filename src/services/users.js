@@ -9,7 +9,7 @@ const setToken = (newToken) => {
 };
 
 const getAll = () => {
-  const request = axios.get("http://localhost:3003/api/clients");
+  const request = axios.get("http://localhost:3003/clients");
   return request.then((response) => {
     const ref = response.data.map((client) => {
       const ui = {
@@ -27,7 +27,7 @@ const getAll = () => {
 // };
 const getOne = (id) => {
   console.log("se entro en la funcion getOne y el ID es", id);
-  const request = axios.get("http://localhost:3003/api/client" + "/" + id);
+  const request = axios.get("http://localhost:3003/clients" + "/" + id);
   return request.then((response) => {
     console.log("este es el response", response);
     return response.data;
@@ -35,14 +35,9 @@ const getOne = (id) => {
 };
 
 const create = (newObject) => {
-  // const config = {
-  //   headers: {
-  //     Authorization: token,
-  //   },
-  // };
   console.log("este el el objeto a crear", newObject);
-  // const request = axios.post(baseUrl, newObject);
-  // return request.then((response) => response.data);
+  const request = axios.post(baseUrl, newObject);
+  return request.then((response) => response.data);
 };
 
 const update = (id, newObject) => {

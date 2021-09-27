@@ -1,0 +1,76 @@
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --varyDarkBlue: hsl(234, 12%, 34%);
+  --grayishBlue: hsl(229, 6%, 66%);
+  --veryLightGray: hsl(0, 0%, 98%);
+  --weight1: 200;
+  --weight2: 400;
+  --weight3: 600;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  /* background-color: var(--veryLightGray); */
+}
+
+.notifyContainer {
+  width: 800px;
+  /* height: 800px; */
+  border-radius: 10px;
+  background-color: rgb(32, 184, 90);
+  padding: 10px 12px;
+  border-left-style: solid;
+  border-left-color: rgb(0, 107, 45);
+  border-left-width: 10px;
+  z-index: 9999;
+  position: relative;
+
+  /* width: 600px; */
+}
+.notifyContainer img {
+  width: 30px;
+  float: left;
+  margin: 13px 15px 0px 0px;
+}
+
+.h1Not {
+  color: rgb(255, 255, 255);
+  font-size: 17px;
+  margin-top: 5px;
+}
+.h4Not {
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 500;
+  margin: 5px 0px;
+}
+
+.notifyErrorContainer {
+  width: 1000px;
+  /* height: 800px; */
+  border-radius: 10px;
+  background-color: rgb(179, 72, 72);
+  padding: 10px 12px;
+  border-left-style: solid;
+  border-left-color: rgb(184, 32, 32);
+  border-left-width: 10px;
+  z-index: 9999;
+  position: relative;
+
+  /* width: 600px; */
+}
+.notifyErrorContainer img {
+  width: 30px;
+  float: left;
+  margin: 13px 15px 0px 0px;
+}

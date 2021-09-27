@@ -57,6 +57,61 @@
   grid-column: 1 / span 7;
 } */
 
+:root {
+  --primary: rgb(2, 12, 20);
+  --primary: rgb(4, 9, 17);
+  --primary: rgba(25, 25, 39, 255);
+  --primary: rgba(31, 29, 43, 255);
+  --primary: #18191a;
+  --primary: rgba(16, 16, 20, 255);
+
+  --pagesBackground: rgb(12, 29, 43);
+  --primaryClaro: rgb(22, 32, 41);
+  --primaryClaro: rgba(6, 13, 31, 0.473);
+  --primaryClaro: rgba(34, 34, 48, 255);
+  --primaryClaro: rgba(37, 40, 54, 255);
+  --primaryClaro: #242526;
+  --primaryClaro: rgba(23, 23, 27, 255);
+
+  --primaryMasClaro: rgb(255, 255, 255);
+  --primaryMasClaro1: #3b3b3b;
+  --primaryMasClaro1: #4d4c4c;
+
+  --primaryMasClaro2: #b0b3b8;
+
+  --placeholder: rgb(153, 153, 153);
+
+  /* --primaryMasClaro1: rgba(73, 75, 85, 255); */
+
+  --tituloH1: white;
+  --cuerpo: rgb(212, 212, 212);
+  --transparentoso: rgba(160, 160, 160, 0.788);
+  --inputAlto1: 35px;
+  --colorComplementarioA: rgb(0, 44, 190);
+  --colorComplementarioB: rgb(14, 38, 54);
+  --colorComplementarioA: #1205c5;
+  --colorComplementarioA: #3c9cb9;
+  --colorComplementarioA: #294080;
+  --colorComplementarioA: #294080;
+  --colorComplementarioA: #134bc4;
+  --colorComplementarioA: rgb(6, 179, 107);
+  --colorComplementarioA: rgba(102, 99, 255, 255);
+
+  --completado: rgb(77, 214, 14);
+  --pendiente: rgb(214, 77, 14);
+
+  --success: rgb(121, 216, 125);
+  --success: rgb(77, 214, 14);
+  --error: red;
+  --celeste: rgb(0, 153, 255);
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  color: var(--tituloH1);
+}
 /* TODO EL GRID */
 .grid-container {
   display: grid;
@@ -66,28 +121,320 @@
   /* grid-template-rows: 5vh 5vh 90vh; */
   /* border: solid; */
 }
+
+/* esto es el topbar */
 .grid-item:first-child {
   background-color: rgb(11, 11, 116);
-  background-color: rgb(240, 240, 240);
+  background-color: var(--primary);
   grid-column: 2 / span 1;
   grid-row: 1 / span 1;
   padding: 15px 15px 0px 15px;
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }
+
+/* el sidebar */
 .grid-item:nth-child(2) {
   background-color: rgb(19, 19, 19);
   background-color: rgb(255, 255, 255);
   background-color: #f0f0f0;
+  background-color: var(--primaryClaro);
+
   grid-column: 1 / span 1;
   grid-row: 1 / span 2;
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  /* width: 1fr; */
 }
 
 .grid-item:nth-child(3) {
   background-color: rgb(240, 240, 240);
+  background-color: var(--primary);
   grid-row: 2 / span 1;
   grid-column: 2 / span 1;
   min-height: 100vh;
   height: 100%;
   padding: 0px 15px 15px 15px;
+}
+
+/* conainers flex */
+
+.flexContainerVertical {
+  display: flex;
+  /* justify-content: center; */
+  color: var(--tituloH1);
+  width: 100%;
+  flex-direction: column;
+}
+
+.flexContainerVerticalSeparado {
+  display: flex;
+  /* justify-content: center; */
+  color: var(--tituloH1);
+  width: 100%;
+  flex-direction: column;
+}
+
+.flexContainerHorizontal {
+  display: flex;
+  /* justify-content: center; */
+  color: var(--tituloH1);
+  width: 100%;
+}
+
+.flexContainerHorizontal h3 {
+  margin: 0px;
+  padding: 0px;
+}
+.flexContainerHorizontal p {
+  margin: 0px;
+  padding: 0px;
+}
+.flexContainerHorizontalWrap {
+  display: flex;
+  /* justify-content: center; */
+  color: var(--tituloH1);
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.flexContainerHorizontal input {
+  margin-top: 5px;
+  margin-right: 15px;
+  width: 100%;
+  border-radius: 6px;
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--primary);
+  color: var(--tituloH1);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.flexContainerHorizontal span {
+  margin-top: 15px;
+}
+
+/* demas */
+
+.flexContainerHorizontal input::placeholder {
+  color: var(--placeholder);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* .flexContainerHorizontal .error::after {
+  content: "errrr)";
+  color: var(--placeholder);
+  font-size: 15px;
+  font-weight: 600;
+} */
+
+.flexContainerVertical input {
+  margin-top: 5px;
+  /* margin-bottom: 30px; */
+  border-radius: 6px;
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--primary);
+  color: var(--tituloH1);
+}
+
+.flexContainerVertical label {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--tituloH1);
+  margin: 25px 0px 10px 0px;
+}
+
+/* Estilo Botones Seleccionar */
+
+.selectButton {
+  border-radius: 5px;
+  border: none;
+  padding: 7px 15px;
+  margin: 5px 10px 10px 0px;
+  cursor: pointer;
+  background-color: var(--primaryClaro);
+  color: var(--primaryMasClaro2);
+  border: 2px solid var(--primaryMasClaro2);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.selectButton:hover {
+  background-color: var(--primaryClaro);
+  color: var(--tituloH1);
+  border: 2px solid var(--colorComplementarioA);
+}
+
+.selectButton.selected {
+  background-color: var(--primaryClaro);
+  color: var(--tituloH1);
+  border: 2px solid var(--colorComplementarioA);
+}
+
+/* TODO DE FORMULARIOS */
+
+.formContainer {
+  width: 100%;
+  background-color: var(--primaryClaro);
+  border-radius: 5px;
+  padding: 15px;
+}
+
+/* Crear Pedido, EditarPedido */
+.formTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--tituloH1);
+  align-self: center;
+}
+
+.formBotonCerrar {
+  font-size: 20px;
+  float: right;
+  top: 0px;
+  color: var(--primary);
+  background-color: var(--tituloH1);
+  margin-right: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 25px;
+  padding: 5px 14px 9px 14px;
+}
+
+/* Pago,Entrega */
+.formSubtitle {
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--tituloH1);
+  margin: 30px 0px 0px 0px;
+  width: 100%;
+}
+
+.formDescription {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--primaryMasClaro2);
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.formThirdTitle {
+  text-align: left;
+  width: 100%;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.formIndicaciones {
+  text-align: left;
+  width: 100%;
+  margin-left: 5px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--primaryMasClaro2);
+}
+
+.formSubmitButton {
+  border-radius: 5px;
+  border: none;
+  padding: 15px 15px;
+  margin: 35px 0px 10px 0px;
+  cursor: pointer;
+  background-color: var(--colorComplementarioA);
+  color: var(--tituloH1);
+  font-weight: 700;
+  font-size: 15px;
+  /* width: 200px; */
+  /* align-self: center; */
+}
+
+.inputContainer {
+  flex: 1;
+  margin-right: 15px;
+  position: relative;
+}
+
+/* ERRRRRRRRRRRRRORR */
+
+/* este 1 */
+.inputContainer.errorInput input {
+  color: rgb(0, 0, 0);
+  border: solid 0.15em var(--error);
+  border-radius: 10px;
+  color: var(--tituloH1);
+}
+/* error 2 */
+.inputContainer.errorInput::after {
+  display: block;
+  content: attr(errr_msg);
+  margin-top: 5px;
+  color: var(--error);
+  font-size: 14px;
+}
+
+/* este3 */
+
+.inputContainer.errorInput input::placeholder {
+  color: var(--primaryMasClaro1);
+}
+
+/* este 4 */
+
+.inputContainer.errorInput input:focus {
+  color: rgb(0, 0, 0);
+  /* background-color: #ffdcdcd0; */
+  border-radius: 10px;
+  border: none;
+  border: solid 0.15em var(--error);
+  color: var(--tituloH1);
+}
+
+/* este 5 */
+
+.inputContainer.errorInput .CheckIcon {
+  color: var(--error);
+  visibility: visible;
+}
+
+/* SUCCESSS */
+
+/* este 1 */
+.inputContainer.successInput input {
+  color: rgb(0, 0, 0);
+  border: solid 0.15em var(--success);
+  border-radius: 10px;
+  color: var(--tituloH1);
+}
+/* error 2 */
+.inputContainer.successInput::after {
+  visibility: hidden;
+}
+
+/* este3 */
+
+.inputContainer.successInput input::placeholder {
+  color: var(--primaryMasClaro1);
+}
+
+/* este 4 */
+
+.inputContainer.successInput input:focus {
+  color: rgb(0, 0, 0);
+  /* background-color: #ffdcdcd0; */
+  border-radius: 10px;
+  border: none;
+  border: solid 0.15em var(--success);
+  color: var(--tituloH1);
+}
+
+/* este 5 */
+
+.inputContainer.successInput .CheckIcon {
+  color: var(--success);
+  visibility: visible;
 }

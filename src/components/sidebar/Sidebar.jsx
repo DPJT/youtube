@@ -65,7 +65,7 @@ export default function Sidebar() {
               className="link sidebarListItem"
               activeClassName="actived"
             >
-              <div className="bolita blue"></div>
+              {/* <div className="bolita blue"></div> */}
               <PermIdentity className="sidebarIcon" />
               Users
             </NavLink>
@@ -75,7 +75,7 @@ export default function Sidebar() {
               className="link sidebarListItem"
               activeClassName="actived"
             >
-              <div className="bolita red"></div>
+              {/* <div className="bolita red"></div> */}
               <Storefront className="sidebarIcon" />
               Products
             </NavLink>

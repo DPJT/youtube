@@ -17,6 +17,7 @@
 .widgetLgTitle {
   font-size: 22px;
   font-weight: 600;
+  color: var(--tituloH1);
 }
 
 .widgetLgTable {

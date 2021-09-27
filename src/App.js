@@ -1,6 +1,5 @@
 import Sidebar from "./components/sidebar/Sidebar";
 import Topbar from "./components/topbar/Topbar";
-import Menu from "./components/menu/menu";
 import "./App.css";
 import Home from "./pages/home/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -13,7 +12,6 @@ import NewProduct from "./pages/newProduct/NewProduct";
 import Mail from "./pages/mail/Mail";
 
 import ReactNotification from "react-notifications-component";
-import { store } from "react-notifications-component";
 import "react-notifications-component/dist/theme.css";
 import "animate.css";
 

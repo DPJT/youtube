@@ -1,4 +1,5 @@
 import Chart from "../../components/chart/Chart";
+import Skills from "../../components/Skills/Skills";
 import FeaturedInfo from "../../components/featuredInfo/FeaturedInfo";
 import "./home.css";
 import { userData } from "../../dummyData";
@@ -33,7 +34,7 @@ export default function Home() {
   return (
     <div className="home">
       {/* <ReactNotification /> */}
-
+      <Skills></Skills>
       <FeaturedInfo />
       <Chart
         data={userData}

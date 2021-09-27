@@ -1,0 +1,73 @@
+import React from "react";
+import { store } from "react-notifications-component";
+import "./notify.css";
+
+export function MyNotify(message) {
+  return (
+    <>
+      <div className="notifyContainer">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPGNpcmNsZSBzdHlsZT0iIiBjeD0iMjU2IiBjeT0iMjU2IiByPSIyMzYuMTciIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMxMTM4ZjciIGNsYXNzPSIiPjwvY2lyY2xlPgoJPHBhdGggc3R5bGU9IiIgZD0iTTI1Niw1MTJDMTE0Ljg1Myw1MTIsMCwzOTcuMTY3LDAsMjU2QzAsMTE0Ljg1MywxMTQuODUzLDAsMjU2LDBjMTQxLjE2NywwLDI1NiwxMTQuODUzLDI1NiwyNTYgICBDNTEyLDM5Ny4xNjcsMzk3LjE2Nyw1MTIsMjU2LDUxMnogTTI1NiwzOS42NTlDMTM2LjcwNSwzOS42NTksMzkuNjU5LDEzNi43MDUsMzkuNjU5LDI1NlMxMzYuNzA1LDQ3Mi4zNDEsMjU2LDQ3Mi4zNDEgICBTNDcyLjM0MSwzNzUuMjc1LDQ3Mi4zNDEsMjU2QzQ3Mi4zNDEsMTM2LjcwNSwzNzUuMjk1LDM5LjY1OSwyNTYsMzkuNjU5eiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzExMzhmNyIgY2xhc3M9IiI+PC9wYXRoPgo8L2c+CjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3R5bGU9IiIgZD0iTTIyNS4wNjYsMzUwLjE5MWMtNS4zMTQsMC0xMC4zOTEtMi4xMjItMTQuMTM5LTUuOTI5bC03My4xNzEtNzQuMzYxICBjLTcuNjc0LTcuODEzLTcuNTc1LTIwLjM0NSwwLjIzOC0yOC4wMzljNy44MTMtNy42NTQsMjAuMzY1LTcuNTc1LDI4LjAzOSwwLjIzOGw1OC40NTgsNTkuNDA5bDEyMC45NDEtMTMzLjE5NSAgYzcuMzk2LTguMTEsMTkuOTI5LTguNjg1LDI3Ljk5OS0xLjM0OGM4LjExLDcuMzU3LDguNzA1LDE5Ljg4OSwxLjM0OCwyOC4wMTlMMjM5Ljc0LDM0My43MDZjLTMuNjY4LDQuMDQ1LTguODI0LDYuMzg1LTE0LjI3Nyw2LjUwNCAgQzIyNS4zMjQsMzUwLjE5MSwyMjUuMjA1LDM1MC4xOTEsMjI1LjA2NiwzNTAuMTkxeiIgZmlsbD0iIzI1YTUzMyIgZGF0YS1vcmlnaW5hbD0iI2ZmZmZmZiIgY2xhc3M9IiI+PC9wYXRoPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8L2c+PC9zdmc+" />
+        <h1 className="h1Not">Successfully</h1>
+        <h4 className="h4Not">{message}</h4>
+      </div>
+    </>
+  );
+}
+
+export function MyErrorNotify(message) {
+  return (
+    <>
+      <div className="notifyErrorContainer">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMS45OSA1MTEuOTkiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPGVsbGlwc2Ugc3R5bGU9IiIgY3g9IjI1NS45OTIiIGN5PSIyNTUuOTk5IiByeD0iMjM2LjI3OCIgcnk9IjIzNi4yNzgiIGZpbGw9IiNmZmZmZmYiIGRhdGEtb3JpZ2luYWw9IiMxMTM4ZjciPjwvZWxsaXBzZT4KCTxwYXRoIHN0eWxlPSIiIGQ9Ik0yNTUuOTk1LDUxMS45NzljLTY1LjU4NywwLTEzMS4xNzQtMjQuOTU3LTE4MS4xMDgtNzQuODcyYy05OS44NDktOTkuODQ5LTk5Ljg0OS0yNjIuMzQ4LDAtMzYyLjIxNyAgIGwwLDBjOTkuODQ5LTk5LjgyOSwyNjIuMzY4LTk5Ljg0OSwzNjIuMjE3LDBjOTkuODQ5LDk5Ljg2OSw5OS44NDksMjYyLjM0OCwwLDM2Mi4yMTcgICBDMzg3LjE2OSw0ODcuMDIyLDMyMS41NjIsNTExLjk3OSwyNTUuOTk1LDUxMS45Nzl6IE0xMDIuOTM5LDEwMi45NDJjLTg0LjM3NCw4NC4zOTQtODQuMzc0LDIyMS43MTksMCwzMDYuMTEzICAgYzg0LjQxNCw4NC4zNzQsMjIxLjczOCw4NC4zOTQsMzA2LjExMywwczg0LjM3NC0yMjEuNzE5LDAtMzA2LjExM0MzMjQuNjM3LDE4LjU2OCwxODcuMzMzLDE4LjU2OCwxMDIuOTM5LDEwMi45NDJMMTAyLjkzOSwxMDIuOTQyICAgeiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzExMzhmNyI+PC9wYXRoPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+Cgk8cGF0aCBzdHlsZT0iIiBkPSJNMTg3LjExNSwzNDQuNjc4Yy01LjA3OSwwLTEwLjE1Ny0xLjk0NC0xNC4wMjYtNS44MTNjLTcuNzU3LTcuNzU3LTcuNzU3LTIwLjI5NSwwLTI4LjA1MiAgIGwxNDAuMjYtMTQwLjI2YzcuNzU3LTcuNzU3LDIwLjI5NS03Ljc1NywyOC4wNTIsMGM3Ljc1Nyw3Ljc1Nyw3Ljc1NywyMC4yOTUsMCwyOC4wNTJsLTE0MC4yNiwxNDAuMjYgICBDMTk3LjI1MiwzNDIuNzM0LDE5Mi4xOTMsMzQ0LjY3OCwxODcuMTE1LDM0NC42Nzh6IiBmaWxsPSIjZmYwMDAwIiBkYXRhLW9yaWdpbmFsPSIjZmZmZmZmIiBjbGFzcz0iIj48L3BhdGg+Cgk8cGF0aCBzdHlsZT0iIiBkPSJNMzI3LjM1NSwzNDQuNjc4Yy01LjA3OSwwLTEwLjE1Ny0xLjk0NC0xNC4wMjYtNS44MTNsLTE0MC4yNi0xNDAuMjYgICBjLTcuNzU3LTcuNzU3LTcuNzU3LTIwLjI5NSwwLTI4LjA1MnMyMC4yOTUtNy43NTcsMjguMDUyLDBsMTQwLjI2LDE0MC4yNmM3Ljc1Nyw3Ljc1Nyw3Ljc1NywyMC4yOTUsMCwyOC4wNTIgICBDMzM3LjUxMywzNDIuNzM0LDMzMi40MzQsMzQ0LjY3OCwzMjcuMzU1LDM0NC42Nzh6IiBmaWxsPSIjZmYwMDAwIiBkYXRhLW9yaWdpbmFsPSIjZmZmZmZmIiBjbGFzcz0iIj48L3BhdGg+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPC9nPjwvc3ZnPg==" />
+        <h1 className="h1Not">Error</h1>
+        <h4 className="h4Not">{message}</h4>
+      </div>
+    </>
+  );
+}
+
+export function errorNotification({
+  message = "",
+  width = 350,
+  position = "bottom-right",
+}) {
+  const error = store.addNotification({
+    width: width,
+    // id: "1",
+    content: MyErrorNotify(message),
+    container: position,
+    insert: "top",
+    animationIn: ["animate__animated animate__bounceIn"], // `animate.css v4` classes
+    animationOut: ["animate__animated animate__bounceOut"], // `animate.css v4` classes
+    dismiss: {
+      duration: 3000,
+      waitForAnimation: true,
+      showIcon: true,
+      // click: false,
+    },
+  });
+  return error;
+}
+
+export function successNotification({
+  message = "",
+  width = 350,
+  position = "bottom-right",
+}) {
+  const success = store.addNotification({
+    // width: 450,
+    // id: "1",
+    content: MyNotify(message),
+    container: position,
+    insert: "top",
+    animationIn: ["animate__animated animate__bounceIn"], // `animate.css v4` classes
+    animationOut: ["animate__animated animate__bounceOut"], // `animate.css v4` classes
+    dismiss: {
+      duration: 3000,
+      waitForAnimation: true,
+      showIcon: true,
+      // click: false,
+    },
+  });
+  return success;
+}

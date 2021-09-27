@@ -1,0 +1,58 @@
+/* Make sure that padding behaves as expected */
+* {
+  box-sizing: border-box;
+}
+.Skills-container {
+  background-color: var(--primaryClaro);
+  margin: 20px 20px 20px 20px;
+  padding: 30px;
+  border-radius: 10px;
+}
+/* Container for skill bars */
+.container {
+  width: 100%; /* Full width */
+  background-color: rgb(218, 223, 217); /* Grey background */
+  margin: 10px 0px;
+  border-radius: 25px;
+}
+h3 {
+  color: var(--tituloH1);
+  font-weight: 500;
+}
+
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 2px; /* Add top padding */
+  padding-bottom: 2px; /* Add bottom padding */
+  color: white; /* White text color */
+  border-radius: 25px;
+  padding-right: 15px;
+  font-size: 15px;
+}
+
+.html {
+  width: 70%;
+  background-color: #04aa6d;
+} /* Green */
+.css {
+  width: 80%;
+  background-color: #2196f3;
+} /* Blue */
+.js {
+  width: 65%;
+  background-color: #f44336;
+} /* Red */
+.php {
+  width: 60%;
+  background-color: #808080;
+} /* Dark Grey */
+
+/* test */
+
+.js::after {
+  content: "65%";
+  position: absolute;
+  color: var(--tituloH1);
+  margin-top: -27px;
+  font-weight: 400;
+} /* Red */

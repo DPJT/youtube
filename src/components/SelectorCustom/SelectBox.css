@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+.select-box--box {
+  width: 150px;
+  position: relative;
+  left: 0px;
+  margin-right: 20px;
+}
+
+.select-box--container {
+  height: var(--inputAlto1);
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--tituloH1);
+  background-color: var(--primaryClaro);
+  font-family: sans-serif;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.select-box--selected-item {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  padding: 7px 0px 0px 10px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.select-box--items {
+  margin-top: 5px;
+  overflow: hidden;
+  width: 150px;
+  border-radius: 7px;
+  background-color: var(--primaryClaro);
+}
+
+.select-box--items div {
+  border: none;
+  cursor: pointer;
+  color: var(--tituloH1);
+  padding: 6px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  height: var(--inputAlto1);
+  text-align: left;
+  padding-left: 10px;
+}
+
+.select-box--items div:hover {
+  border: none;
+  background-color: var(--primary);
+  cursor: pointer;
+  color: var(--tituloH1);
+}
+
+.select-box--arrow {
+  width: 40px;
+  height: var(--inputAlto1);
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  position: absolute;
+  right: -1px;
+  top: 0;
+  cursor: pointer;
+}
+
+/* .select-box--arrow-down {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid rgb(38, 39, 38);
+}
+
+.select-box--arrow-up {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid rgb(255, 255, 255);
+} */
+
+.arrow {
+  position: absolute;
+  top: 10px;
+  left: 16px;
+  height: 15px;
+  width: 15px;
+}
+.arrow::before,
+.arrow::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 0.15rem;
+  height: 100%;
+  transition: all 0.5s;
+}
+.arrow::before {
+  left: -5px;
+  transform: rotate(45deg);
+  background-color: #ffffff;
+}
+.arrow::after {
+  left: 5px;
+  transform: rotate(-45deg);
+  background-color: #ffffff;
+}
+.open .arrow::before {
+  left: -5px;
+  transform: rotate(-45deg);
+}
+.open .arrow::after {
+  left: 5px;
+  transform: rotate(45deg);
+}
